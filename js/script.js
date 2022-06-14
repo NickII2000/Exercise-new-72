@@ -130,4 +130,12 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     });
 
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            // modal.classList.add('hide');
+            // modal.classList.remove('show');
+            modal.classList.toggle('show');
+            document.body.style.overflow = '';
+        }
+    });
 });
