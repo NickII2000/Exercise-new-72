@@ -123,19 +123,19 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
     }));
 
-    modalCloseBtn.addEventListener('click', () => {
+    function closeModal() {
         // modal.classList.add('hide');
         // modal.classList.remove('show');
         modal.classList.toggle('show');
         document.body.style.overflow = '';
+    }
+    modalCloseBtn.addEventListener('click', () => {
+        closeModal();
     });
 
     modal.addEventListener('click', (event) => {
         if (event.target === modal) {
-            // modal.classList.add('hide');
-            // modal.classList.remove('show');
-            modal.classList.toggle('show');
-            document.body.style.overflow = '';
+            closeModal();
         }
     });
 });
