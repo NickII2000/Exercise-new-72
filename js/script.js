@@ -129,9 +129,7 @@ window.addEventListener('DOMContentLoaded', () => {
         modal.classList.toggle('show');
         document.body.style.overflow = '';
     }
-    modalCloseBtn.addEventListener('click', () => {
-        closeModal();
-    });
+    modalCloseBtn.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (event) => {
         if (event.target === modal) {
