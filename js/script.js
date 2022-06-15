@@ -116,12 +116,14 @@ window.addEventListener('DOMContentLoaded', () => {
         modal = document.querySelector('.modal'),
         modalCloseBtn = document.querySelector('[data-close]');
 
-    modalTrigger.forEach(btn => btn.addEventListener('click', () => {
+    modalTrigger.forEach(btn => btn.addEventListener('click', openModal));
+
+    function openModal() {
         // modal.classList.add('show');
         // modal.classList.remove('hide');
         modal.classList.toggle('show');
         document.body.style.overflow = 'hidden';
-    }));
+    }
 
     function closeModal() {
         // modal.classList.add('hide');
@@ -142,4 +144,6 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+
+    const modalTimerId = setTimeout(openModal, 5000);
 });
