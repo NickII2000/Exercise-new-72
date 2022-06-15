@@ -121,6 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // modal.classList.remove('hide');
         modal.classList.toggle('show');
         document.body.style.overflow = 'hidden';
+        clearInterval(modalTimerId);
     }
 
     modalTrigger.forEach(btn => btn.addEventListener('click', openModal));
@@ -145,5 +146,5 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const modalTimerId = setTimeout(openModal, 5000);
+    const modalTimerId = setTimeout(openModal, 3000);
 });
